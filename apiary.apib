@@ -8,7 +8,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ## Query Question [/questions/{question_id}]
 
 + Parameters
-    + question_id (number, required) - Question ID
+    + question_id: 1 (number, required) - Question ID
     
 ### Get by question id [GET]
 
@@ -37,8 +37,8 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 ## Vote [/questions/{question_id}/choices/{choice_id}]
 
 + Parameters
-    + question_id (number, required) - Question ID
-    + choice_id (string, required)
+    + question_id: 1 (number, required) - Question ID
+    + choice_id: "Java" (string, required)
     
 ### Vote a  Question [POST]
 
