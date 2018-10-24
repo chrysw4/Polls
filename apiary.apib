@@ -5,10 +5,39 @@ HOST: http://polls.apiblueprint.org/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions{?page}]
+## Questions Collection [/questions/{question_id}]
 
 + Parameters
-    + page: 1 (optional) - Page parameter
+    + question_id: 1 (number, required) - Question ID
+    
+### Get by question id [GET]
+
++ Response 200 (application/json)
+
+        {
+            "question": "Favourite programming language?",
+            "published_at": "2015-08-05T08:40:51.620Z",
+            "choices": [
+                {
+                    "choice": "Swift",
+                    "votes": 2048
+                }, {
+                    "choice": "Python",
+                    "votes": 1024
+                }, {
+                    "choice": "Objective-C",
+                    "votes": 512
+                }, {
+                    "choice": "Ruby",
+                    "votes": 256
+                }
+            ]
+        }
+
+## Questions Collection [/questions]
+
+##+ Parameters
+##    + page: 1 (number, optional) - Page parameter
     
 ### List All Questions [GET]
 
